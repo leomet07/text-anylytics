@@ -24,46 +24,14 @@ def ask():
     copyaslist = aslist
     
 
-    #removin all spaces
-    copyaslist[:] = (value for value in copyaslist if value != " ")
 
-    # removin all semicolons
-    copyaslist[:] = (value for value in copyaslist if value != ";")
+    bannedletters = [' ',';' ,':' ,'.' ,',' ,'('  ,')'  ,'[',']' ,'{' ,'}','\n' ,'\t']
+    #looping with a for loop
+    for bannedletter in bannedletters:
+        # removin bannedletter
+        copyaslist[:] = (value for value in copyaslist if value != bannedletter)
 
-    # removin all colons
-    copyaslist[:] = (value for value in copyaslist if value != ":")
 
-    # removin all periods
-    copyaslist[:] = (value for value in copyaslist if value != ".")
-
-    # removin all commas
-    copyaslist[:] = (value for value in copyaslist if value != ",")
-
-    # removin all question marks
-    copyaslist[:] = (value for value in copyaslist if value != "?")
-
-    # removin all exclamation mark
-    copyaslist[:] = (value for value in copyaslist if value != "!")
-
-    # removin all hyphens
-    copyaslist[:] = (value for value in copyaslist if value != "-")
-
-    # removin all parerthases
-    copyaslist[:] = (value for value in copyaslist if value != "(")
-
-    copyaslist[:] = (value for value in copyaslist if value != ")")
-
-    copyaslist[:] = (value for value in copyaslist if value != "[")
-
-    copyaslist[:] = (value for value in copyaslist if value != "]")
-
-    copyaslist[:] = (value for value in copyaslist if value != "{")
-
-    copyaslist[:] = (value for value in copyaslist if value != "}")
-
-    # removin all newlines
-    copyaslist[:] = (value for value in copyaslist if value != "\n")
-    #print("after" , copyaslist)
 
 
 
